@@ -56,8 +56,6 @@ public class Main {
 
         if (server.isStarted()) {
             LOGGER.info("Pokedex is started on port {}", configuration.getPort());
-            LOGGER.info("Go to http://localhost:{}/swagger/index.html for api docs",
-                    configuration.getPort());
         }
         server.join();
     }
@@ -79,7 +77,7 @@ public class Main {
 
         return server;
     }
-    
+
     private static void setupMonitoringAndHealthChecks(PathMappingsHandler root) {
         addHandler(root, LIVEZ, new CustomHeaderHandler(new LivezHandler()));
         addHandler(root, READYZ, new CustomHeaderHandler(new ReadyzHandler()));
