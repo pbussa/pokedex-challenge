@@ -42,9 +42,8 @@ public class TranslationHandler extends Handler.Abstract {
 		String[] pathSegments = path.split("/");
 		String pokemonName;
 		if (path.endsWith("/pokemon/translated") || path.endsWith("/pokemon/translated/")) {
-			pokemonName = "";  // Empty pokemon name for "/pokemon/" or "/pokemon"
+			pokemonName = "";
 		} else {
-			// Ensure handling for "/pokemon/translated/..."
 			pokemonName = pathSegments.length > 2 ? pathSegments[pathSegments.length - 1] : "";
 		}
 
