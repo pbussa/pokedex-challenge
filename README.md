@@ -42,9 +42,9 @@ docker build -t pokedex .
 ```
 Run the Docker Container
 ```sh
-docker run --rm -ti -p 8888:8888 pokedex
+docker run --rm -ti -p 8001:8001 pokedex
 ```
-The service will be accessible on port 8888.
+The service will be accessible on port 8001.
 
 ## Endpoints
 
